@@ -5,7 +5,7 @@ export const card = () => {
         <>
             <div className="card">
                 <div className="card__wrapper">
-
+                    
                 </div>
             </div>
         </>
