@@ -1,9 +1,14 @@
 import "../atoms/atoms.css";
 
 export const button = (props) => {
+
+    const handleClick = () => {
+        
+    }
+
     return (
         <>
-            <button onClick={props.handleClick} className={props.buttonStyle}>
+            <button onClick={handleClick} className={props.buttonStyle}>
                 {props.content}
             </button>
         </>
