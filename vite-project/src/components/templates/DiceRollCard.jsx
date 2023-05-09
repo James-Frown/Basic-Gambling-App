@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const DiceRollCard = () => {
 
-const [result, setResult] = useState("");
+    const [result, setResult] = useState("");
 
     function handleClick() {
         var Num = Math.floor(Math.random() * 6);

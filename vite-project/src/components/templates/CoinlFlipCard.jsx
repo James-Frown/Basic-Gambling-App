@@ -1,9 +1,8 @@
-import "./CoinFlipCard.css";
 import { useState } from "react";
 
 const CoinFlipCard = () => {
 
-const [result, setResult] = useState("");
+    const [result, setResult] = useState("");
 
     function handleClick() {
         var Num = Math.floor(Math.random() * 2);
