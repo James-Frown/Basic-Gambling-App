@@ -38,8 +38,8 @@ const DiceRollCard = () => {
                 <h1 className="card__title">Dice Roll Game</h1>
                 <p className="card__description">Your Odds: {odds}%</p>
                 <button className="card__button" onClick={handleClick}>Go</button>
-                <p className="card__content">Your Current Roll: {result}</p>
-                <p className="card__content">Previous Roll: {lastresult}</p>
+                <p className="card__content">Current Side: {result}</p>
+                <p className="card__content">Previous: {lastresult}</p>
             </div>
         </>
     );

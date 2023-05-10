@@ -27,8 +27,8 @@ const CoinFlipCard = () => {
                 <h1 className="card__title">Coin Flip Game</h1>
                 <p className="card__description">Your Odds: {odds}%</p>
                 <button className="card__button" onClick={handleClick}>Go</button>
-                <p className="card__content">Your Current Flip: {result}</p>
-                <p className="card__content">Previous Flip: {lastresult}</p>
+                <p className="card__content">Current Side: {result}</p>
+                <p className="card__content">Previous: {lastresult}</p>
             </div>
         </>
     );

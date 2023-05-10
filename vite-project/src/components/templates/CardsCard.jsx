@@ -92,8 +92,8 @@ const CardsCard = () => {
                 <h1 className="card__title">Card Game</h1>
                 <p className="card__description">Your Odds: {odds}%</p>
                 <button className="card__button" onClick={handleClick}>Go</button>
-                <p className="card__content">Your Current Card: {restult}</p>
-                <p className="card__content">Previous Card: {lastresult}</p>
+                <p className="card__content">Current Card: {restult}</p>
+                <p className="card__content">Previous: {lastresult}</p>
             </div>
         </>
     );

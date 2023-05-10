@@ -21,7 +21,7 @@
 
 .card__description {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: normal;
     font-style: italic;
 }
@@ -38,13 +38,26 @@
 }
 
 .card__button:hover {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: green;
     background-color: black;
 }
 
 .card__content {
     display: block;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: normal;
+}
+
+.card__guess__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card__content__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
