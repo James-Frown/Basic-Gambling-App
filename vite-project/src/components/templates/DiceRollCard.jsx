@@ -8,23 +8,23 @@ const DiceRollCard = () => {
         var Num = Math.floor(Math.random() * 6);
         console.log(Num);
         if (Num == 0) {
-            console.log("*");
-            setResult("*");
+            console.log("1");
+            setResult("1");
         } else if (Num == 1) {
-            console.log("**");
-            setResult("**");
+            console.log("2");
+            setResult("2");
         } else if (Num == 2) {
-            console.log("***");
-            setResult("***");
+            console.log("3");
+            setResult("3");
         } else if (Num == 3) {
-            console.log("****");
-            setResult("****");
+            console.log("4");
+            setResult("4");
         } else if (Num == 4) {
-            console.log("*****");
-            setResult("*****");
+            console.log("5");
+            setResult("5");
         } else if (Num == 5) {
-            console.log("******");
-            setResult("******");
+            console.log("6");
+            setResult("6");
         }
     }
 
