@@ -5,7 +5,7 @@ const DiceRollCard = () => {
 
     const [result, setResult] = useState("");
     const [lastresult, setLastResult] = useState(result);
-    const odds = 1 / 6;
+    const odds = Math.floor((1 / 6)*100);
 
     function handleClick() {
         var Num = Math.floor(Math.random() * 6);
@@ -36,8 +36,8 @@ const DiceRollCard = () => {
         <>
             <div className="card__wrapper">
                 <h1 className="card__title">Dice Roll Game</h1>
-                <p className="card__description">Your Odds: {odds}</p>
-                <button className="card__button" onClick={handleClick}>Roll Dice</button>
+                <p className="card__description">Your Odds: {odds}%</p>
+                <button className="card__button" onClick={handleClick}>Go</button>
                 <p className="card__content">Your Current Roll: {result}</p>
                 <p className="card__content">Previous Roll: {lastresult}</p>
             </div>

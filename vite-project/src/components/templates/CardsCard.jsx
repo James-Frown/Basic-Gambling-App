@@ -8,7 +8,7 @@ const CardsCard = () => {
     const [restult, setRestult] = useState("");
     const [lastresult, setLastResult] = useState(restult);
 
-    const odds = 1 / 52;
+    const odds = Math.floor((1 / 52)*100);
 
     function getValue() {
         var Num = Math.floor(Math.random() * 14);
@@ -90,8 +90,8 @@ const CardsCard = () => {
         <>
             <div className="card__wrapper">
                 <h1 className="card__title">Card Game</h1>
-                <p className="card__description">Your Odds: {odds}</p>
-                <button className="card__button" onClick={handleClick}>Get Card</button>
+                <p className="card__description">Your Odds: {odds}%</p>
+                <button className="card__button" onClick={handleClick}>Go</button>
                 <p className="card__content">Your Current Card: {restult}</p>
                 <p className="card__content">Previous Card: {lastresult}</p>
             </div>
