@@ -3,10 +3,13 @@ import { useState } from "react";
 const DiceRollCard = () => {
 
     const [result, setResult] = useState("");
+    const [lastresult, setLastResult] = useState(result);
+    const odds = 1 / 6;
 
     function handleClick() {
         var Num = Math.floor(Math.random() * 6);
         console.log(Num);
+        setLastResult(result);
         if (Num == 0) {
             console.log("1");
             setResult("1");
@@ -32,8 +35,10 @@ const DiceRollCard = () => {
         <>
             <div>
                 <h1>Dice Roll Game</h1>
+                <p>Your Odds: {odds}</p>
                 <button onClick={handleClick}>Roll Dice</button>
-                <p>The Result is: {result}</p>
+                <p>Your Current Roll: {result}</p>
+                <p>Previous Roll: {lastresult}</p>
             </div>
         </>
     );
