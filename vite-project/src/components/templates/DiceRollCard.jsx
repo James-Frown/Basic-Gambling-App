@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Cards.css";
 
 const DiceRollCard = () => {
 
@@ -11,22 +12,22 @@ const DiceRollCard = () => {
         console.log(Num);
         setLastResult(result);
         if (Num == 0) {
-            console.log("1");
+            console.log("Rolled 1");
             setResult("1");
         } else if (Num == 1) {
-            console.log("2");
+            console.log("Rolled 2");
             setResult("2");
         } else if (Num == 2) {
-            console.log("3");
+            console.log("Rolled 3");
             setResult("3");
         } else if (Num == 3) {
-            console.log("4");
+            console.log("Rolled 4");
             setResult("4");
         } else if (Num == 4) {
-            console.log("5");
+            console.log("Rolled 5");
             setResult("5");
         } else if (Num == 5) {
-            console.log("6");
+            console.log("Rolled 6");
             setResult("6");
         }
     }

@@ -1,9 +1,10 @@
 import { useState } from "react";
+import "./Cards.css";
 
 const CardsCard = () => {
 
-    const [value, setValue] = useState("");
-    const [suite, setSuite] = useState("");
+    const [value, setValue] = useState("...");
+    const [suite, setSuite] = useState("...");
     const [restult, setRestult] = useState("");
     const [lastresult, setLastResult] = useState(restult);
 
@@ -13,46 +14,46 @@ const CardsCard = () => {
         var Num = Math.floor(Math.random() * 14);
         console.log(Num);
         if (Num == 0) {
-            console.log("Ace");
+            console.log("Value: Ace");
             setValue("Ace");
         } else if (Num == 1) {
-            console.log("2");
+            console.log("Value: 2");
             setValue("2");
         } else if (Num == 2) {
-            console.log("3");
+            console.log("Value: 3");
             setValue("3");
         } else if (Num == 3) {
-            console.log("4");
+            console.log("Value: 4");
             setValue("4");
         } else if (Num == 4) {
-            console.log("5");
+            console.log("Value: 5");
             setValue("5");
         } else if (Num == 5) {
-            console.log("6");
+            console.log("Value: 6");
             setValue("6");
         } else if (Num == 6) {
-            console.log("7");
+            console.log("Value: 7");
             setValue("7");
         } else if (Num == 7) {
-            console.log("8");
+            console.log("Value: 8");
             setValue("8");
         } else if (Num == 8) {
-            console.log("9");
+            console.log("Value: 9");
             setValue("9");
         } else if (Num == 9) {
-            console.log("10");
+            console.log("Value: 10");
             setValue("10");
         } else if (Num == 10) {
-            console.log("Jack");
+            console.log("Value: Jack");
             setValue("Jack");
         } else if (Num == 11) {
-            console.log("Queen");
+            console.log("Value: Queen");
             setValue("Queen");
         } else if (Num == 12) {
-            console.log("King");
+            console.log("Value: King");
             setValue("King");
         } else if (Num == 13) {
-            console.log("Ace");
+            console.log("Value: Ace");
             setValue("Ace");
         }
 
@@ -62,24 +63,24 @@ const CardsCard = () => {
         var Num = Math.floor(Math.random() * 4);
         console.log(Num);
         if (Num == 0) {
-            console.log("Harts");
+            console.log("Suit: Harts");
             setSuite("Harts");
         } else if (Num == 1) {
-            console.log("Spades");
+            console.log("Suit: Spades");
             setSuite("Spades");
         } else if (Num == 2) {
-            console.log("Clubs");
+            console.log("Suit: Clubs");
             setSuite("Clubs");
         } else if (Num == 3) {
-            console.log("Diamonds");
+            console.log("Suit: Diamonds");
             setSuite("Diamonds");
         }
     }
 
     function handleClick() {
-        setLastResult(restult);
         getValue();
         getSuit();
+        setLastResult(restult);
         var holder = "";
         holder = value + " of " + suite;
         setRestult(holder);

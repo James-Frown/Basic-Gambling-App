@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./Cards.css";
+
 
 const CoinFlipCard = () => {
 
@@ -11,10 +13,10 @@ const CoinFlipCard = () => {
         console.log(Num);
         setLastResult(result);
         if (Num == 0) {
-            console.log("Heads");
+            console.log("Side: Heads");
             setResult("Heads");
         } else if (Num == 1) {
-            console.log("Tails");
+            console.log("Side: Tails");
             setResult("Tails");
         }
     }
