@@ -34,12 +34,12 @@ const DiceRollCard = () => {
 
     return (
         <>
-            <div>
-                <h1>Dice Roll Game</h1>
-                <p>Your Odds: {odds}</p>
-                <button onClick={handleClick}>Roll Dice</button>
-                <p>Your Current Roll: {result}</p>
-                <p>Previous Roll: {lastresult}</p>
+            <div className="card__wrapper">
+                <h1 className="card__title">Dice Roll Game</h1>
+                <p className="card__description">Your Odds: {odds}</p>
+                <button className="card__button" onClick={handleClick}>Roll Dice</button>
+                <p className="card__content">Your Current Roll: {result}</p>
+                <p className="card__content">Previous Roll: {lastresult}</p>
             </div>
         </>
     );
