@@ -6,43 +6,38 @@ const BlackJack = () => {
 
     const odds = Math.floor((1 / 4) * 100);
 
-    // 1 = Harts, 2 = Diamonds, 3 = Spades, 4 = Clubs
-    // const suites = [1, 2, 3, 4]
-    // const [suites, setSuites] = useState([]);
+    // declare the value of face cards
+    const Ace = 1 || 11;
+    const Jack = 10;
+    const Queen = 10;
+    const King = 10;
 
-    // const Ranks = [{Ace}, {2}, {3}]
-    // const Suites = [{"Harts": }, {Diamonds}, {Spades}, {Clubs}]
+    // declare the cards in a suite
+    const harts = [Ace, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace];
+    const diamonds = [Ace, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace];
+    const clubs = [Ace, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace];
+    const spades = [Ace, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace];
 
-    // 1 = Soft Ace, 11 = Jack, 12 = Queen, 13 = King, 14 = Hard Ace
-    // const values = [1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-    // const [values, setValues] = useState([])
+    // declare the cards in a deck
+    const deck = [harts, diamonds, clubs, spades];
 
-    // A Deck Holds Values and Suites
-    // const deck = [suites, values];
-    // const [deck, setDeck] = useState({});
+    // declare Dealers Cards
+    var Dcards = [];
 
-    const A = "Harts ";
-    const B = "Diamonds ";
-    const C = "Spades ";
-    const D = "Clubs ";
-
-    // Dealers Cards
-    var Dcards = [[A, 7], [B, 4]];
-
-    // Players Cards
-    var Pcards = [[C, 6], [D, 9]];
-
-    // Logic
-    // Decks = 52
-    // Suites = 4
-    // Values = 14
+    // declare Players Cards
+    var Pcards = [];
 
     function newDeck() {
+        const newdeck = deck;
+        return (newdeck);
+    }
 
+    function getPlayersCards() {
+        newDeck()
     }
 
     function handleDeal() {
-        newDeck();
+        getPlayersCards()
     }
 
     function handleHit() {
