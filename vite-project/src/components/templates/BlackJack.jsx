@@ -10,8 +10,8 @@ const BlackJack = () => {
     // const suites = [1, 2, 3, 4]
     // const [suites, setSuites] = useState([]);
 
-    const Ranks = [{Ace}, {2}, {3}]
-    const Suites = [{"Harts": }, {Diamonds}, {Spades}, {Clubs}]
+    // const Ranks = [{Ace}, {2}, {3}]
+    // const Suites = [{"Harts": }, {Diamonds}, {Spades}, {Clubs}]
 
     // 1 = Soft Ace, 11 = Jack, 12 = Queen, 13 = King, 14 = Hard Ace
     // const values = [1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
@@ -19,13 +19,18 @@ const BlackJack = () => {
 
     // A Deck Holds Values and Suites
     // const deck = [suites, values];
-    const [deck, setDeck] = useState({});
+    // const [deck, setDeck] = useState({});
+
+    const A = "Harts ";
+    const B = "Harts ";
+    const C = "Harts ";
+    const D = "Harts ";
 
     // Dealers Cards
-    var Dcards = [];
+    var Dcards = [[A, 7], [B, 4]];
 
     // Players Cards
-    var Pcards = [];
+    var Pcards = [[C, 6], [D, 9]];
 
     // Logic
     // Decks = 52
@@ -33,11 +38,11 @@ const BlackJack = () => {
     // Values = 14
 
     function newDeck() {
-        setDeck({[]})
+
     }
 
     function handleDeal() {
-
+        newDeck();
     }
 
     function handleHit() {
@@ -69,8 +74,12 @@ const BlackJack = () => {
                 </div>
                 <div className="card__guess__wrapper">
                     <button className="card__button" onClick={handleDeal}>Deal</button>
+                </div>
+                <div className="card__guess__wrapper">
                     <button className="card__button" onClick={handleHit}>Hit</button>
                     <button className="card__button" onClick={handleStand}>Stand</button>
+                </div>
+                <div className="card__guess__wrapper">
                     <button className="card__button" onClick={handleSplit}>Split</button>
                     <button className="card__button" onClick={handleDubble}>Dubble</button>
                 </div>
