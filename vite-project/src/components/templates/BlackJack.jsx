@@ -22,9 +22,9 @@ const BlackJack = () => {
     // const [deck, setDeck] = useState({});
 
     const A = "Harts ";
-    const B = "Harts ";
-    const C = "Harts ";
-    const D = "Harts ";
+    const B = "Diamonds ";
+    const C = "Spades ";
+    const D = "Clubs ";
 
     // Dealers Cards
     var Dcards = [[A, 7], [B, 4]];
