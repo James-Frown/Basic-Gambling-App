@@ -7,7 +7,7 @@ const BlackJack = () => {
     const odds = Math.floor((1 / 4) * 100);
 
     // declare the value of face cards
-    const Ace = 1 || 11;
+    const Ace = 11 || 1;
     const Jack = 10;
     const Queen = 10;
     const King = 10;
@@ -21,15 +21,38 @@ const BlackJack = () => {
     // declare the cards in a deck
     const deck = [harts, diamonds, clubs, spades];
 
-    // declare Dealers Cards
+    // declare Dealers Card
     var Dcards = [];
 
-    // declare Players Cards
+    // declare Players Card
     var Pcards = [];
+    
+    // declare Dealers hand
+    var Dhand = [];
+
+    // declare Players hand
+    var Phand = [];
+
+
+    function getCard() {
+        var Num = Math.floor(Math.random() * 4);
+        console.log(Num);
+        if (Num == 0) {
+            console.log("Suit: Harts");
+            setSuite("Harts");
+        } else if (Num == 1) {
+            console.log("Suit: Spades");
+            setSuite("Spades");
+        } else if (Num == 2) {
+            console.log("Suit: Clubs");
+            setSuite("Clubs");
+        } else if (Num == 3) {
+            console.log("Suit: Diamonds");
+            setSuite("Diamonds");
+        }
+    }
 
     function newDeck() {
-        const newdeck = deck;
-        return (newdeck);
     }
 
     function getPlayersCards() {
@@ -41,7 +64,7 @@ const BlackJack = () => {
     }
 
     function handleHit() {
-
+        getCard()
     }
 
     function handleStand() {
