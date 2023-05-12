@@ -33,22 +33,21 @@ const BlackJack = () => {
     // declare Players hand
     var Phand = [];
 
-
     function getCard() {
         var Num = Math.floor(Math.random() * 4);
         console.log(Num);
         if (Num == 0) {
-            console.log("Suit: Harts");
-            setSuite("Harts");
+            console.log();
+
         } else if (Num == 1) {
-            console.log("Suit: Spades");
-            setSuite("Spades");
+            console.log();
+
         } else if (Num == 2) {
-            console.log("Suit: Clubs");
-            setSuite("Clubs");
+            console.log();
+
         } else if (Num == 3) {
-            console.log("Suit: Diamonds");
-            setSuite("Diamonds");
+            console.log();
+
         }
     }
 
@@ -86,9 +85,9 @@ const BlackJack = () => {
                 <p className="card__description">Odds of Winning: {odds}%</p>
                 <div className="card__content__wrapper">
                     <p className="card__content">Dealer:</p>
-                    <p className="card__content">{Dcards}</p>
+                    <p className="card__content">{Dhand}</p>
                     <p className="card__content">Player:</p>
-                    <p className="card__content">{Pcards}</p>
+                    <p className="card__content">{Phand}</p>
                 </div>
                 <div className="card__guess__wrapper">
                     <button className="card__button" onClick={handleDeal}>Deal</button>
