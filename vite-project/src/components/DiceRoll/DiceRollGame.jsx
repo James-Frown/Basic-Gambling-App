@@ -72,8 +72,8 @@ const DiceRoll = () => {
             <div className="">
                 <h2 className="">Dice Roll</h2>
                 <p className="">Your Odds: {odds}%</p>
-                <button className="" onClick={handleClick}>Go</button>
-                <p className="">Current Side: {result}</p>
+                <button className="" onClick={handleClick}>Roll</button>
+                <p className="">Current: {result}</p>
                 <p className="">Previous: {lastresult}</p>
             </div>
         </>

@@ -13,7 +13,7 @@ const GameFilter = () => {
     // state management for content
     const [content, setContent] = useState();
 
-    // function to show content
+    // function to show coinflip game
     function showCoinFlip() {
 
         // show user has clicked
@@ -26,18 +26,18 @@ const GameFilter = () => {
         setContent(<CoinFlip />);
     }
 
-        // function to show content
-        function showDiceRoll() {
+    // function to show diceroll game 
+    function showDiceRoll() {
 
-            // show user has clicked
-            console.log("User: Clicked")
-    
-            // show what user has clicked
-            console.log("Selected: CoinFlip Game")
-    
-            // update state of content
-            setContent(<DiceRoll />);
-        }
+        // show user has clicked
+        console.log("User: Clicked")
+
+        // show what user has clicked
+        console.log("Selected: CoinFlip Game")
+
+        // update state of content
+        setContent(<DiceRoll />);
+    }
 
     return (
         <>
