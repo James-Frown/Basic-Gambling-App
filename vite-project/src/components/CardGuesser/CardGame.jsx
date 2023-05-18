@@ -88,12 +88,12 @@ const CardsCard = () => {
 
     return (
         <>
-            <div className="card__wrapper">
-                <h1 className="card__title">Card Game</h1>
-                <p className="card__description">Your Odds: {odds}%</p>
-                <button className="card__button" onClick={handleClick}>Go</button>
-                <p className="card__content">Current Card: {restult}</p>
-                <p className="card__content">Previous: {lastresult}</p>
+            <div className="">
+                <h1 className="">Card Game</h1>
+                <p className="">Your Odds: {odds}%</p>
+                <button className="" onClick={handleClick}>Go</button>
+                <p className="">Current Card: {restult}</p>
+                <p className="">Previous: {lastresult}</p>
             </div>
         </>
     );

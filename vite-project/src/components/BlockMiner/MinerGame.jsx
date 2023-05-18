@@ -94,19 +94,19 @@ const MinerCard = () => {
 
     return (
         <>
-            <div className="card__wrapper">
-                <h1 className="card__title">Lost & Found Game</h1>
-                <p className="card__description">Odds of Winning: {Win}%</p>
-                <p className="card__description">Odds of JackPot: {JackPot}%</p>
-                <p className="card__description">Odds of MegaLoss: {MegaLoss}%</p>
-                <div className="card__guess__wrapper">
-                    <button className="card__button" onClick={handleClick}>-1-</button>
-                    <button className="card__button" onClick={handleClick}>-2-</button>
-                    <button className="card__button" onClick={handleClick}>-3-</button>
-                    <button className="card__button" onClick={handleClick}>-4-</button>
+            <div className="">
+                <h1 className="">Lost & Found Game</h1>
+                <p className="">Odds of Winning: {Win}%</p>
+                <p className="">Odds of JackPot: {JackPot}%</p>
+                <p className="">Odds of MegaLoss: {MegaLoss}%</p>
+                <div className="">
+                    <button className="" onClick={handleClick}>-1-</button>
+                    <button className="" onClick={handleClick}>-2-</button>
+                    <button className="" onClick={handleClick}>-3-</button>
+                    <button className="" onClick={handleClick}>-4-</button>
                 </div>
-                <p className="card__content">Current Find: {find}</p>
-                <p className="card__content">Total Points: {total}</p>
+                <p className="">Current Find: {find}</p>
+                <p className="">Total Points: {total}</p>
             </div>
         </>
     );

@@ -23,12 +23,12 @@ const CoinFlipCard = () => {
 
     return (
         <>
-            <div className="card__wrapper">
-                <h1 className="card__title">Coin Flip Game</h1>
-                <p className="card__description">Your Odds: {odds}%</p>
-                <button className="card__button" onClick={handleClick}>Go</button>
-                <p className="card__content">Current Side: {result}</p>
-                <p className="card__content">Previous: {lastresult}</p>
+            <div className="">
+                <h1 className="">Coin Flip Game</h1>
+                <p className="">Your Odds: {odds}%</p>
+                <button className="" onClick={handleClick}>Go</button>
+                <p className="">Current Side: {result}</p>
+                <p className="">Previous: {lastresult}</p>
             </div>
         </>
     );

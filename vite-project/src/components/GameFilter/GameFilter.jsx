@@ -1,4 +1,5 @@
 // importing the game pages
+import 
 
 // import the react tools
 import { useState } from 'react';
@@ -8,8 +9,13 @@ import './GameFilter.css';
 
 const GameFilter = () => {
 
-    // create the states for the game filter
-    function [content, setContent] = useState();
+    // state management for content
+    const [content, setContent] = useState();
+
+    // function to show content
+    function game1() {
+        setContent();
+    }
 
     return (
         <>
@@ -23,7 +29,7 @@ const GameFilter = () => {
                     </p>
                 </div>
                 <div className='button__wrapper'>
-                    <button className='button__selector'>
+                    <button className='button__selector' onClick={game1}>
                     </button>
                 </div>
                 <div className='content__wrapper'>
