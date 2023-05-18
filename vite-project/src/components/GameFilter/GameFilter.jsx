@@ -1,8 +1,9 @@
-// importing the game pages
-import CoinFlip from '../CoinFlip/CoinlFlipGame';
-
 // import the react tools
 import { useState } from 'react';
+
+// importing the game pages
+import CoinFlip from '../CoinFlip/CoinFlipGame';
+import DiceRoll from '../DiceRoll/DiceRollGame';
 
 // import the styling
 import './GameFilter.css';
@@ -14,10 +15,29 @@ const GameFilter = () => {
 
     // function to show content
     function showCoinFlip() {
+
+        // show user has clicked
         console.log("User: Clicked")
+
+        // show what user has clicked
         console.log("Selected: CoinFlip Game")
-        setContent(CoinFlip);
+
+        // update state of content
+        setContent(<CoinFlip />);
     }
+
+        // function to show content
+        function showDiceRoll() {
+
+            // show user has clicked
+            console.log("User: Clicked")
+    
+            // show what user has clicked
+            console.log("Selected: CoinFlip Game")
+    
+            // update state of content
+            setContent(<DiceRoll />);
+        }
 
     return (
         <>
@@ -33,6 +53,9 @@ const GameFilter = () => {
                 <div className='button__wrapper'>
                     <button className='button__selector' onClick={showCoinFlip}>
                         CoinFlip Game
+                    </button>
+                    <button className='button__selector' onClick={showDiceRoll}>
+                        DiceRoll Game
                     </button>
                 </div>
                 <div className='content__wrapper'>
