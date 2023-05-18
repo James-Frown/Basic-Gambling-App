@@ -1,5 +1,5 @@
 // importing the game pages
-import 
+import CoinFlip from '../CoinFlip/CoinlFlipGame';
 
 // import the react tools
 import { useState } from 'react';
@@ -13,8 +13,10 @@ const GameFilter = () => {
     const [content, setContent] = useState();
 
     // function to show content
-    function game1() {
-        setContent();
+    function showCoinFlip() {
+        console.log("User: Clicked")
+        console.log("Selected: CoinFlip Game")
+        setContent(CoinFlip);
     }
 
     return (
@@ -22,14 +24,15 @@ const GameFilter = () => {
             <div className='games_wrapper'>
                 <div className='heading__wrapper'>
                     <h1 className='games__heading'>
-                        Games
+                        GameHub
                     </h1>
                     <p className='games__description'>
-                        Here are a few games that i offer:
+                        A place to enjoy some basic games i have made...
                     </p>
                 </div>
                 <div className='button__wrapper'>
-                    <button className='button__selector' onClick={game1}>
+                    <button className='button__selector' onClick={showCoinFlip}>
+                        CoinFlip Game
                     </button>
                 </div>
                 <div className='content__wrapper'>

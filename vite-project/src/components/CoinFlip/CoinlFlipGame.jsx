@@ -1,8 +1,6 @@
 import { useState } from "react";
-import "./Cards.css";
 
-
-const CoinFlipCard = () => {
+const CoinFlip = () => {
 
     const [result, setResult] = useState("");
     const [lastresult, setLastResult] = useState(result);
@@ -34,4 +32,4 @@ const CoinFlipCard = () => {
     );
 };
 
-export default CoinFlipCard;
+export default CoinFlip;
