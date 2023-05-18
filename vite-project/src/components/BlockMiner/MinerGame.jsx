@@ -10,9 +10,6 @@ const MysteryMiner = () => {
     const [total, setTotal] = useState(find);
 
     // declaring the odds
-    const Win = Math.floor((1 / 4) * 100);
-
-    // declaring the odds
     const JackPot = Math.floor(((1 / 4) * (1 / 10)) * 100);
 
     // declaring the odds
@@ -22,8 +19,8 @@ const MysteryMiner = () => {
     function handleLucky() {
         var Num = Math.floor(Math.random() * 10);
         if (Num == 0) {
-            console.log("Found: 0 points");
-            setFind(0);
+            console.log("Found: 5 points");
+            setFind(+5);
         } else if (Num == 1) {
             console.log("Found: 10 points");
             setFind(+10);
@@ -58,28 +55,28 @@ const MysteryMiner = () => {
 
     // function to handle unlucky find
     function handleUnlucky() {
-        var Num = Math.floor(Math.random() * 6);
+        var Num = Math.floor(Math.random() * 7);
         if (Num == 0) {
             console.log("Lost: 0 points");
             setFind(0);
         } else if (Num == 1) {
-            console.log("Lost: 10 points");
-            setFind(-10);
+            console.log("Lost: 0 points");
+            setFind(0);
         } else if (Num == 2) {
-            console.log("Lost: 20 points");
-            setFind(-20);
+            console.log("Lost: 0 points");
+            setFind(0);
         } else if (Num == 3) {
-            console.log("Lost: 100 points");
-            setFind(-100);
+            console.log("Lost: 0 points");
+            setFind(0);
         } else if (Num == 4) {
-            console.log("Lost: 200 points");
-            setFind(-200);
+            console.log("Lost: 0 points");
+            setFind(0);
         } else if (Num == 5) {
-            console.log("Lost: 1000 points");
-            setFind(-1000);
+            console.log("Lost: 0 points");
+            setFind(0);
         } else if (Num == 6) {
-            console.log("Lost: 2000 points");
-            setFind(-2000);
+            console.log("Lost: 0 points");
+            setFind(0);
         }
         setTotal(find + total);
         console.log("Total points: " + total)
@@ -87,37 +84,71 @@ const MysteryMiner = () => {
 
     // function to handle click
     function handleClick() {
-        var Num = Math.floor(Math.random() * 4);
-        if (Num == 0) {
-            console.log("You Are Lucky");
-            handleLucky();
-        } else if (Num == 1) {
-            console.log("You Are Un-Lucky");
-            handleUnlucky();
-        } else if (Num == 2) {
-            console.log("You Are Un-Lucky");
-            handleUnlucky();
-        } else if (Num == 3) {
-            console.log("You Are Un-Lucky");
-            handleUnlucky();
+
+        // show user has clicked
+        console.log("User: Clicked")
+
+        if (total >= 250) {
+            // show user has enough credits
+            console.log("User: has credits")
+
+            // update state of total
+            setTotal(total - 250);
+
+            // get a random number between 0 & 5
+            var Num = Math.floor(Math.random() * 2);
+
+            // show random number
+            console.log("Random Number = " + Num);
+
+            // logic for testing random number
+            if (Num == 0) {
+                console.log("You Are Lucky");
+                handleLucky();
+            } else if (Num == 1) {
+                console.log("You Are Un-Lucky");
+                handleUnlucky();
+            }
+
+        } else {
+            // show user has no credits
+            console.log("User: has no credits")
         }
+
+
+    }
+
+    // function to handle click
+    function addCredits() {
+
+        // show user has clicked
+        console.log("User: Clicked")
+
+        // show user has added credits
+        console.log("User: Added 1000 Credits");
+
+        // update state of total
+        setTotal(total + 1000);
     }
 
     return (
         <>
             <div className="">
-                <h1 className="">Lost & Found</h1>
+                <h2 className="">Mystery Miner</h2>
+                <p className="">Cost Per Spin: 250 Credits</p>
                 <p className="">Odds of JackPot: {JackPot}%</p>
-                <p className="">Odds of Winning: {Win}%</p>
                 <p className="">Odds of MegaLoss: {MegaLoss}%</p>
                 <div className="">
-                    <button className="" onClick={handleClick}>-1-</button>
-                    <button className="" onClick={handleClick}>-2-</button>
-                    <button className="" onClick={handleClick}>-3-</button>
-                    <button className="" onClick={handleClick}>-4-</button>
+                    <button className="" onClick={handleClick}>1</button>
+                    <button className="" onClick={handleClick}>2</button>
+                    <button className="" onClick={handleClick}>3</button>
+                    <button className="" onClick={handleClick}>4</button>
                 </div>
                 <p className="">Current: {find}</p>
                 <p className="">Balance: {total}</p>
+                <div className="">
+                    <button className="" onClick={addCredits}>Add Credits</button>
+                </div>
             </div>
         </>
     );
