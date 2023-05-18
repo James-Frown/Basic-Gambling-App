@@ -22,13 +22,13 @@ const BlackJack = () => {
     const deck = [harts, diamonds, clubs, spades];
 
     // declare Dealers Card
-    var Dcards = [];
+    // var Dcards = [];
 
     // declare Players Card
     var Pcards = [];
     
     // declare Dealers hand
-    var Dhand = [];
+    // var Dhand = [];
 
     // declare Players hand
     var Phand = [];
@@ -84,8 +84,8 @@ const BlackJack = () => {
                 <h1 className="card__title">Blalck Jack</h1>
                 <p className="card__description">Odds of Winning: {odds}%</p>
                 <div className="card__content__wrapper">
-                    <p className="card__content">Dealer:</p>
-                    <p className="card__content">{Dhand}</p>
+                    {/* <p className="card__content">Dealer:</p>
+                    <p className="card__content">{Dhand}</p> */}
                     <p className="card__content">Player:</p>
                     <p className="card__content">{Phand}</p>
                 </div>
