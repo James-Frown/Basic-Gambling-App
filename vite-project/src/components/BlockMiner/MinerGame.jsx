@@ -1,15 +1,24 @@
+// import the react tools
 import { useState } from "react";
-import "./Cards.css";
 
+const MysteryMiner = () => {
 
-const MinerCard = () => {
-
+    // state management for find
     const [find, setFind] = useState(0);
-    const [total, setTotal] = useState(find);
-    const Win = Math.floor((1 / 4) * 100);
-    const JackPot = Math.floor(((1 / 4)*(1 / 10)) * 100);
-    const MegaLoss = Math.floor(((3 / 4)*(1 / 6)) * 100);
 
+    // state management for total
+    const [total, setTotal] = useState(find);
+
+    // declaring the odds
+    const Win = Math.floor((1 / 4) * 100);
+
+    // declaring the odds
+    const JackPot = Math.floor(((1 / 4) * (1 / 10)) * 100);
+
+    // declaring the odds
+    const MegaLoss = Math.floor(((3 / 4) * (1 / 6)) * 100);
+
+    // function to handle lucky find
     function handleLucky() {
         var Num = Math.floor(Math.random() * 10);
         if (Num == 0) {
@@ -47,6 +56,7 @@ const MinerCard = () => {
         console.log("Total points: " + total)
     }
 
+    // function to handle unlucky find
     function handleUnlucky() {
         var Num = Math.floor(Math.random() * 6);
         if (Num == 0) {
@@ -75,6 +85,7 @@ const MinerCard = () => {
         console.log("Total points: " + total)
     }
 
+    // function to handle click
     function handleClick() {
         var Num = Math.floor(Math.random() * 4);
         if (Num == 0) {
@@ -95,9 +106,9 @@ const MinerCard = () => {
     return (
         <>
             <div className="">
-                <h1 className="">Lost & Found Game</h1>
-                <p className="">Odds of Winning: {Win}%</p>
+                <h1 className="">Lost & Found</h1>
                 <p className="">Odds of JackPot: {JackPot}%</p>
+                <p className="">Odds of Winning: {Win}%</p>
                 <p className="">Odds of MegaLoss: {MegaLoss}%</p>
                 <div className="">
                     <button className="" onClick={handleClick}>-1-</button>
@@ -105,11 +116,11 @@ const MinerCard = () => {
                     <button className="" onClick={handleClick}>-3-</button>
                     <button className="" onClick={handleClick}>-4-</button>
                 </div>
-                <p className="">Current Find: {find}</p>
-                <p className="">Total Points: {total}</p>
+                <p className="">Current: {find}</p>
+                <p className="">Balance: {total}</p>
             </div>
         </>
     );
 };
 
-export default MinerCard;
+export default MysteryMiner;

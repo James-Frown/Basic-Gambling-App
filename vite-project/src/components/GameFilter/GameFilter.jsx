@@ -4,6 +4,7 @@ import { useState } from 'react';
 // importing the game pages
 import CoinFlip from '../CoinFlip/CoinFlipGame';
 import DiceRoll from '../DiceRoll/DiceRollGame';
+import MysteryMiner from '../BlockMiner/MinerGame';
 
 // import the styling
 import './GameFilter.css';
@@ -39,6 +40,19 @@ const GameFilter = () => {
         setContent(<DiceRoll />);
     }
 
+        // function to show diceroll game 
+        function showSlot() {
+
+            // show user has clicked
+            console.log("User: Clicked")
+    
+            // show what user has clicked
+            console.log("Selected: Mystery Miner")
+    
+            // update state of content
+            setContent(<MysteryMiner />);
+        }
+
     return (
         <>
             <div className='games_wrapper'>
@@ -56,6 +70,9 @@ const GameFilter = () => {
                     </button>
                     <button className='button__selector' onClick={showDiceRoll}>
                         DiceRoll Game
+                    </button>
+                    <button className='button__selector' onClick={showSlot}>
+                        Slot Game
                     </button>
                 </div>
                 <div className='content__wrapper'>
